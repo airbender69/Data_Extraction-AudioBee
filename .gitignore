@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Debug files
+debug.py
+debug_cartoon.py
+error_screenshot.png
+
+# OS files
+Thumbs.db
