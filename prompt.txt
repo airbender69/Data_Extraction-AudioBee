@@ -1,0 +1,53 @@
+# prompts.txt
+# List of AI prompts used while building the ekantipur.com scraper
+
+
+PROMPT 1:
+"I need a Playwright Python scraper skeleton for ekantipur.com that extracts
+entertainment news articles and a cartoon section. Use sync_playwright, include
+error handling, and add a helper to convert relative URLs to absolute. Structure
+it with two separate functions: one per task."
+
+---
+
+PROMPT 2 :
+"In Playwright, how do I reliably extract image URLs when the site uses lazy
+loading? The img tags might have data-src, data-lazy-src, or srcset instead of
+a plain src attribute. Give me a Python helper function that tries each attribute
+in order and returns the first valid URL."
+
+---
+
+PROMPT 3:
+"The news site uses Nepali (Devanagari) text labels like 'मनोरञ्जन' for the
+Entertainment section and 'व्यङ्ग्यचित्र' for Cartoon. How do I use Playwright's
+text= selector to locate elements by Nepali text and then walk up the DOM to find
+the nearest ancestor that contains an img tag?"
+
+---
+
+PROMPT 4:
+"Add try/except blocks around each element extraction call so that if a selector
+returns None the script uses a fallback selector instead of raising an
+AttributeError. Show me the pattern for title, image_url, category, and author."
+
+---
+
+PROMPT 5 :
+"How do I write a Python dict containing Nepali (Unicode) strings to a JSON file
+so the Devanagari characters are preserved and not escaped to \\uXXXX sequences?
+Show the json.dump call with the correct parameters."
+
+---
+
+PROMPT 6 :
+"The site returns a 403 when fetched with requests. In Playwright, how do I set
+a realistic user-agent string and viewport so the browser context looks like a
+normal Chrome user and avoids basic bot detection?"
+
+---
+
+PROMPT 7 :
+"I'm getting 0 article cards. How do I print the inner HTML of the page body in
+Playwright so I can inspect the actual class names and find the right selectors?
+Also show me how to use page.pause() to open the Playwright Inspector."
